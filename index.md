@@ -5,16 +5,13 @@ tagline: 简单说明
 ---
 {% include JB/setup %}
 
-我在CSDN的博客 [CSDN Blog](http://blog.csdn.net/idxuanjun)
+正在学习如何在 `Github` 上创建自己的博客，请等待……
 
-## Example
+## 学习中……
 
-This blog contains sample posts which help stage pages and blog data.
-When you don't need the samples anymore just delete the `_posts/core-samples` folder.
+还从来没有用过 `Jekyll`,正在学习使用，下面是一些测试的例子，等待转换完成后再次访问。
 
-    $ rm -rf _posts/core-samples
-
-Here's a sample "posts list".
+这里是我的“文章列表”
 
 <ul class="posts">
   {% for post in site.posts %}
@@ -24,7 +21,6 @@ Here's a sample "posts list".
 
 ## To-Do
 
-This theme is still unfinished. If you'd like to be added as a contributor, [please fork](http://github.com/plusjade/jekyll-bootstrap)!
-We need to clean up the themes, make theme usage guides with theme-specific markup examples.
+可以先访问我在CSDN的博客 [CSDN Blog](http://blog.csdn.net/idxuanjun)
 
 
