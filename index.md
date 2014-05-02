@@ -22,6 +22,6 @@ tagline: 把工作变成兴趣
 #### 备注
 
 * 我在 `Github` 的源码 [Github](https://github.com/idxuanjun)
-* 我在 `CSDN` 的博客 [CSDN Blog](http://blog.csdn.net/idxuanjun)
+* 我在 `CSDN` 的博客 [CSDN](http://blog.csdn.net/idxuanjun)
 
 
