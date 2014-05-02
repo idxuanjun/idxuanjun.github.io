@@ -10,7 +10,7 @@ pygments: true
 # so be sure to set them if your theme uses them.
 #
 title : 老轩的博客
-tagline: Site Tagline
+tagline: 烟斗老轩的生活点滴
 author :
     name : 老轩
     email : idxuanjun@qq.com
@@ -84,15 +84,15 @@ JB :
         provider : disqus
         disqus :
             short_name : idxuanjun
-        livefyre :
-            site_id : 123
-        intensedebate :
-            account : 123abc
-        facebook :
-            appid : 123
-            num_posts: 5
-            width: 580
-            colorscheme: light
+        #livefyre :
+            #site_id : 123
+        #intensedebate :
+            #account : 123abc
+        #facebook :
+            #appid : 123
+            #num_posts: 5
+            #width: 580
+            #colorscheme: light
 
     # Settings for analytics helper
     # Set 'provider' to the analytics provider you want to use.

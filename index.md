@@ -1,7 +1,7 @@
 ---
 layout: page
 title : 首页
-tagline: 简单说明
+tagline: 把工作变成兴趣
 ---
 {% include JB/setup %}
 
@@ -15,7 +15,7 @@ tagline: 简单说明
 
 <ul class="posts">
   {% for post in site.posts %}
-    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+    <li><span>{{ post.date | date: "%Y年%m月%d日" }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}
 </ul>
 

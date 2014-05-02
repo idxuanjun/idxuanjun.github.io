@@ -2,8 +2,8 @@
 layout: post
 category: 研发
 title: Golang 学习及使用
-tagline: "Supporting tagline"
-tags : [Golang]
+tagline: "把工作变成兴趣"
+tags : [Golang,研发]
 ---
 {% include JB/setup %}
 
