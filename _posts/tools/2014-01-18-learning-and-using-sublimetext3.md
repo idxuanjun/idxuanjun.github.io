@@ -319,8 +319,8 @@ tags : [Sublime,文本编辑]
 4. 本文相关下载资源
 -------------------
 
-* [下载我的快捷键设置](https://github.com/idxuanjun/idxuanjun.github.io/blob/master/res/2014-01-18-learning-and-using-sublimetext3/Default\ (Windows\).sublime-keymap "我的快捷键设置")。
-* [下载我的参数配置](https://github.com/idxuanjun/idxuanjun.github.io/blob/master/res/2014-01-18-learning-and-using-sublimetext3/Preferences.sublime-settings "我的参数配置")。
+* [下载我的快捷键设置](/res/2014-01-18-learning-and-using-sublimetext3/Default\ (Windows\).sublime-keymap "我的快捷键设置")。
+* [下载我的参数配置](/res/2014-01-18-learning-and-using-sublimetext3/Preferences.sublime-settings "我的参数配置")。
 * [下载我的CSDN Blog插件](https://github.com/idxuanjun/ToCsdnBlog "我的CSDN Blog插件")。
 因为我是用Markdown写的CSDN博客，但“Markdown Preview”插件生成的HTML代码段与CSDN博客支持的格式不一致，所以自己写了个插件转换一下。
 * [下载Package Control组件](https://sublime.wbond.net/installation "Package Control组件安装下载")
