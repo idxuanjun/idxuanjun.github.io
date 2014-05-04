@@ -149,8 +149,8 @@ dfn {
     code,
     kbd,
     samp {
-      font-family: 'Droid Sans Mono', 'DejaVu Sans Mono', 'Ubuntu Mono', Monaco, monospace, serif;
-  _font-family: 'courier new', 'Droid Sans Mono', 'DejaVu Sans Mono', 'Ubuntu Mono', Monaco, monospace;
+      font-family: Consolas, 'Droid Sans Mono', 'DejaVu Sans Mono', 'Ubuntu Mono', Monaco, monospace, serif;
+  _font-family: Consolas, 'courier new', 'Droid Sans Mono', 'DejaVu Sans Mono', 'Ubuntu Mono', Monaco, monospace;
     font-size: 1em;
     border-radius: 4px;
     opacity: 0.8;
@@ -422,7 +422,7 @@ Calculation should be done via http://j.mp/rNg5uA
 No styleguide reference.
 */
 body {
-  font-family: 'Droid Sans Mono', 'DejaVu Sans Mono', 'Ubuntu Mono', consolas, monaco, monospace;
+  font-family: Consolas, 'Droid Sans Mono', 'DejaVu Sans Mono', 'Ubuntu Mono', Monaco, monospace;
     font-size: 1em;
       line-height: 1.625em;
 }
@@ -439,7 +439,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Droid Sans Mono', 'DejaVu Sans Mono', UbuntuMono-B, consolas, monaco, monospace;
+  font-family: Consolas, 'Droid Sans Mono', 'DejaVu Sans Mono', UbuntuMono-B, Monaco, monospace;
   }
   h1,
   .h1 {
@@ -613,7 +613,7 @@ pre {
 /* HEADER
 --------------------------------------------------------------------------------- */
 .the-header .logo {
-  font-family: UbuntuMono-B, consolas, monaco, monospace;
+  font-family: Consolas, UbuntuMono-B, Monaco, monospace;
     margin: 0;
     }
     .the-header .logo a:visited {
