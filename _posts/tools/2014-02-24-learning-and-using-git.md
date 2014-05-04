@@ -11,7 +11,7 @@ MSysGit 设置
 
 * 初始化配置：
 
-        {% highlight sh linenos=table %}
+        {% highlight sh %}
         #配置ID
         git config --global user.name "your_id"
         #配置EMAIL
@@ -46,7 +46,7 @@ MSysGit 设置
 
 * 修改或新建 `/etc/fstab`，增加以下内容：
 
-        {% highlight sh linenos=table %}
+        {% highlight sh %}
         d:/Platform/home /home
         d:/Platform/Resources /res
         d:/Space /spaces
@@ -56,7 +56,7 @@ MSysGit 设置
 
 * 设置全局配置文件 `/etc/profile`：
 
-        {% highlight sh linenos=table %}
+        {% highlight sh %}
         # 定义语言环境变量
         export LC_ALL=en_US.UTF-8
         export LANG=en_US.UTF-8
@@ -80,7 +80,7 @@ MSysGit 设置
 
 1. 增加注册表项：
 
-        {% highlight registry linenos=table %}
+        {% highlight registry %}
         Windows Registry Editor Version 5.00
 
         [HKEY_CLASSES_ROOT\Directory\shell\opengit]
@@ -91,7 +91,7 @@ MSysGit 设置
 
 2. 修改Cygwin.bat文件，增加设置路径变量 `set _T=%*`：
 
-        {% highlight sh linenos=table %}
+        {% highlight sh %}
         @echo off
         set _T=%*
         ……
@@ -99,7 +99,7 @@ MSysGit 设置
 
 3. 设置用户配置文件 `\home\${UserName}\.bash_profile`，在最后增加：
 
-        {% highlight sh linenos=table %}
+        {% highlight sh %}
         # 右键菜单打开Git在当前目录
         export _T=${_T//\\//}   # replace backslash to fowardslash
         if [[ $_T == "" ]]; then
@@ -119,7 +119,7 @@ Git 常用操作
 
     * 初始化服务仓库，不包括工作区，通常为远程仓库
 
-            {% highlight sh linenos=table %}
+            {% highlight sh %}
             git init  --bare
             git init  --bare --shared
             {% endhighlight %}
@@ -166,7 +166,7 @@ Git 常用操作
 
 * 增加远程仓库配置
 
-        {% highlight sh linenos=table %}
+        {% highlight sh %}
         git remote add github git@github.com:idxuanjun/GitTest.git (推荐)
         git remote add github https://github.com/idxuanjun/GitTest.git
         git remote add local file://f:/Repositories/git/conv_dict
@@ -190,14 +190,14 @@ Git 常用操作
 
 * 获取远程仓库
 
-        {% highlight sh linenos=table %}
+        {% highlight sh %}
         git pull 远端仓库名 远端分支名:本地分支名
         git pull github master
         {% endhighlight %}
 
 * 提交到远程仓库
 
-        {% highlight sh linenos=table %}
+        {% highlight sh %}
         git push 远端仓库名 本地分支名:远端分支名
         git push github master
         git push -u github master
@@ -212,7 +212,7 @@ GitHub创建步骤
 
 * Create a new repository on the command line
 
-        {% highlight sh linenos=table %}
+        {% highlight sh %}
         touch README.md
         git init
         git add README.md
@@ -223,7 +223,7 @@ GitHub创建步骤
 
 * Push an existing repository from the command line
 
-        {% highlight sh linenos=table %}
+        {% highlight sh %}
         git remote add origin https://github.com/idxuanjun/vimim_dict.git
         git push -u origin master
         {% endhighlight %}
@@ -248,7 +248,7 @@ Git忽略文件有3种设置方式：
 
 * 忽略样例
 
-        {% highlight ini linenos=table %}
+        {% highlight cfg %}
         #忽略掉所有文件名是 foo.txt的文件
         foo.txt
         #忽略所有生成的 html文件,
