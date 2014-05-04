@@ -20,7 +20,7 @@ tags : [Sublime,文本编辑]
 
 配置文件中字体是我在网上找到的“雅黑+Consolas”编程字体，自己修改了一些不喜欢的地方，见下图。你可以变更配置文件为自己喜欢的或直接注释即可。
 
-![Sublime Text3字体图片](https://github.com/idxuanjun/idxuanjun.github.io/raw/master/res/2014-01-18-learning-and-using-sublimetext3/sublime-text3-full-screen.jpg "Sublime Text3字体图片")。
+![Sublime Text3字体图片](/res/2014-01-18-learning-and-using-sublimetext3/sublime-text3-full-screen.jpg "Sublime Text3字体图片")
 
 
 1. Sublime Text 快捷键
