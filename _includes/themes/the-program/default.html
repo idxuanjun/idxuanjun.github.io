@@ -50,7 +50,7 @@
         <div class="unit-foot">
             <div class="unit-inner unit-foot-inner">
                 <div class="misc vcard">
-                    <h4>文章分类</h4>
+                    <h4>文档类别</h4>
                 </div>
                 <ul class="tab_box">
                     {% assign categories_list = site.categories %}
@@ -67,12 +67,46 @@
                 <div class="misc vcard">
                     <h4>关于</h4>
                     <ul>
-                        <li class="contact"><a href="mailto:{{ site.author.email }}"><img src="/assets/pics/email.png" alt="邮件" title="EMail" width="16" style="vertical-align:-23px"/>&nbsp邮件联系</a></li>
-                        <li class="github"><a href="http://github.com/{{ site.author.github }}/"><img src="/assets/pics/git.png" alt="源码" title="Git" width="16" style="vertical-align:-23px"/>&nbsp源码仓库</a></li>
-                        <li class="rss"><a href="/atom.xml"><img src="/assets/pics/feed.png" alt="订阅" title="Feed" width="16" style="vertical-align:-23px"/>&nbsp订阅本站</a></li>
+                        <li class="contact"><a href="mailto:{{ site.author.email }}"><img src="/assets/pics/email.png"
+                            alt="邮件" title="EMail" width="16" style="vertical-align:-23px"/>&nbsp邮件联系</a></li>
+                        <li class="github"><a href="http://github.com/{{ site.author.github }}/"><img src="/assets/pics/git.png"
+                            alt="源码" title="Git" width="16" style="vertical-align:-23px"/>&nbsp源码仓库</a></li>
+                        <li class="rss"><a href="/atom.xml"><img src="/assets/pics/feed.png"
+                            alt="订阅" title="Feed" width="16" style="vertical-align:-23px"/>&nbsp订阅本站</a></li>
                     </ul>
                     <div class="clear"></div>
                 </div><!-- misc -->
+                <div class="misc vcard">
+                    <h4>访问统计</h4>
+                    <a href="http://www.hitwebcounter.com/links.php" target="_blank">
+                        <img src="http://hitwebcounter.com/counter/counter.php?page=5505123&style=0025&nbdigits=6&type=page&initCount=0"
+                        title="http://www.hitwebcounter.com/links.php" Alt="http://www.hitwebcounter.com/links.php"   border="0" >
+                    </a>
+                    <a href="http://www.hitwebcounter.com/" title="Web Meter"
+                        target="_blank" style="font-family: Geneva, Arial, Helvetica;
+                        font-size: 12px; color: #6B706A; text-decoration: underline ;"><strong>Web Meter</strong>
+                    </a>
+                    <!--<table border="0">
+                        <tr>
+                            <td align=center valign=bottom>
+                                <a href="http://www.hitwebcounter.com/" title="Web Meter"
+                                    target="_blank" style="font-family: Arial, Helvetica, sans-serif;
+                                    font-size: 12px; color: #6B706A; text-decoration: underline ;"><strong>Web Meter</strong>
+                                </a>
+                            </td>
+                            <td align=center valign=top>&nbsp</td>
+                        </tr>
+                        <tr>
+                            <td valign=left align=top><h4>访问统计</h4></td>
+                            <td align=center>
+                                <a href="http://www.hitwebcounter.com/links.php" target="_blank">
+                                    <img src="http://hitwebcounter.com/counter/counter.php?page=5505123&style=0025&nbdigits=6&type=page&initCount=0"
+                                    title="http://www.hitwebcounter.com/links.php" Alt="http://www.hitwebcounter.com/links.php"   border="0" >
+                                </a>
+                            </td>
+                        </tr>
+                    </table>-->
+                </div>
                 <p class="licence">
                 Copyright &copy; {{ site.time | date: '2013-%Y' }} {{ site.author.name }}<br>
                 ------------------------------<br>
