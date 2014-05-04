@@ -25,9 +25,10 @@ tags : [Cygwin,操作系统]
 
 1. 设置全局配置文件 `Cygwin\etc\profile`：
 
-        #-----------------------------------------------------------------------------
+        {% highlight sh linenos=table %}
+        #-----------------------------------------------------------
         # BuXing Settings
-        #-----------------------------------------------------------------------------
+        #-----------------------------------------------------------
         # 定义语言环境变量
         export LC_ALL=en_US.UTF-8
         export LANG=en_US.UTF-8
@@ -66,14 +67,18 @@ tags : [Cygwin,操作系统]
         # umask 027
         # Paranoid: neither group nor others have any perms:
         # umask 077
+        {% endhighlight %}
 
 2. 设置用户配置文件 `Cygwin\home\${UserName}\.bashrc`：
 
+            {% highlight sh linenos=table %}
             # 自动补全不区分大小写
             shopt -s nocaseglob
+            {% endhighlight %}
 
 3. 设置用户配置文件 `Cygwin\home\${UserName}\.inputrc`：
 
+            {% highlight sh linenos=table %}
             # 自动补全不区分大小写
             set completion-ignore-case on
 
@@ -84,9 +89,11 @@ tags : [Cygwin,操作系统]
             # Ctrl+Backspace/Delete to delete whole words
             "\e[3;5~": kill-word
             "\C-_": backward-kill-word
+            {% endhighlight %}
 
 4. 链接磁盘及常用文件夹：
 
+        {% highlight sh linenos=table %}
         ln -s /cygdrive/c /c
         ln -s /cygdrive/d /d
         ln -s /cygdrive/e /e
@@ -95,6 +102,7 @@ tags : [Cygwin,操作系统]
         ln -s /cygdrive/d/Platform/Resources /res
         ln -s /cygdrive/e/Downloads /dl
         ln -s /cygdrive/f/Repositories/git /git_repo
+        {% endhighlight %}
 
 5. 建立Windows环境变量：
 
@@ -105,35 +113,42 @@ tags : [Cygwin,操作系统]
 
 1. 增加注册表项：
 
+        {% highlight registry linenos=table %}
         Windows Registry Editor Version 5.00
 
         [HKEY_CLASSES_ROOT\Directory\shell\opencygwin]
         @="打开用 Cygwin"
         [HKEY_CLASSES_ROOT\Directory\shell\opencygwin\command]
         @="d:\\Platform\\Cygwin\\Cygwin.bat %V"
+        {% endhighlight %}
 
 2. 修改Cygwin.bat文件，增加设置路径变量 `set _T=%*`：
 
+        {% highlight bat linenos=table %}
         @echo off
         set _T=%*
         D:
         chdir D:\Platform\Cygwin\bin
         bash --login -i
+        {% endhighlight %}
 
 3. 设置用户配置文件 `Cygwin\home\${UserName}\.bash_profile`，在最后增加：
 
+        {% highlight sh linenos=table %}
         # 右键菜单打开Cygwin在当前目录
         export _T=${_T//\\//}   # replace backslash to fowardslash
         if [[ $_T == "" ]]; then
             export _T=${HOME}
         fi
         cd "$_T"
+        {% endhighlight %}
 
 Git设置
 --------
 
 * 初始化配置：
 
+        {% highlight sh linenos=table %}
         #配置ID
         git config --global user.name "your_id"
         #配置EMAIL
@@ -147,6 +162,7 @@ Git设置
 
         # 全局配置文件权限
         git config --global core.filemode false
+        {% endhighlight %}
 
 * 配置 SSH 证书（下面二选一）：
 
