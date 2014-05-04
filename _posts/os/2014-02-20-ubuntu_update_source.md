@@ -7,7 +7,7 @@ tags : [Ubuntu,操作系统]
 ---
 {% include JB/setup %}
 
-本文只是记录学习过程，为了以后使用备忘而已，参考了[Ubuntu 中文 Wiki](http://wiki.ubuntu.org.cn/Qref/Source)。
+本文参考了[Ubuntu 中文 Wiki](http://wiki.ubuntu.org.cn/Qref/Source)。
 
 更新步骤
 --------
@@ -35,29 +35,36 @@ tags : [Ubuntu,操作系统]
 
 1. 安装 "apt-fast"：
 
+        {% highlight sh linenos=table %}
         sudo apt-get install axel aria2
         sudo add-apt-repository ppa:apt-fast/stable
         sudo apt-get update
         sudo apt-get install apt-fast
+        {% endhighlight %}
 
 2. 对 "apt-fast" 进行设置（新版本安装完成后会显示设置窗口）：
 
+        {% highlight sh linenos=table %}
         sudo gedit /etc/axelrc
 
         # 设置合适的线程数，默认为4
         num_connections = Num
+        {% endhighlight %}
 
 3. 用 "apt-fast" 代替 "apt-get" 使用：
 
+        {% highlight sh linenos=table %}
         sudo apt-fast update
         sudo apt-fast install ***
         sudo apt-fast upgrade
+        {% endhighlight %}
 
 Ubuntu13.10源列表
 ----------------
 
 ##### 注意： `deb` 是软件源，`deb-src` 是软件源代码源。源码源已经删除，如需要请自行复制软件源并修改前缀 `deb` 为 'deb-src'。
 
+    {% highlight text %}
     #中科大源
     deb http://mirrors.ustc.edu.cn/ubuntu/ saucy main restricted universe multiverse
     deb http://mirrors.ustc.edu.cn/ubuntu/ saucy-security main restricted universe multiverse
@@ -128,3 +135,4 @@ Ubuntu13.10源列表
     deb http://mirrors.sohu.com/ubuntu/ saucy-backports main restricted universe multiverse
     deb http://mirrors.sohu.com/ubuntu/ saucy-security main restricted universe multiverse
     deb http://mirrors.sohu.com/ubuntu/ saucy-proposed main restricted universe multiverse
+    {% endhighlight %}

@@ -43,14 +43,18 @@ tags : [Ubuntu,操作系统]
 
 1. 可以卸载原装的IBUS输入法：
 
+        {% highlight sh linenos=table %}
         killall ibus-daemon
         sudo apt-get purge ibus ibus-gtk ibus-gtk3 ibus-pinyin* ibus-sunpinyin ibus-table python-ibus
         rm -rf ~/.config/ibus
+        {% endhighlight %}
 
 2. 安装fcitx搜狗拼音输入法：
 
+        {% highlight sh linenos=table %}
         sudo add-apt-repository ppa:fcitx-team/nightly
         sudo apt-get update
+        {% endhighlight %}
 
 3. 选择安装下列拼音引擎，完成安装后重启系统：
 
@@ -75,6 +79,7 @@ tags : [Ubuntu,操作系统]
 中州韵輸入方案
 -------------
 
+    {% highlight sh linenos=table %}
     # 朙月拼音（預裝）
     sudo make install librime-data-luna-pinyin
     # 雙拼
@@ -103,3 +108,4 @@ tags : [Ubuntu,操作系统]
     sudo apt-get install librime-data-scj6
     # 筆順五碼
     sudo apt-get install librime-data-stroke5
+    {% endhighlight %}

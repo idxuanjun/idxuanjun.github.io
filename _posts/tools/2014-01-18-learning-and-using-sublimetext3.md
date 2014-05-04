@@ -290,6 +290,7 @@ tags : [Sublime,文本编辑]
 
 #### 1. 增加编译运行批处理文件“runJava.bat”并放入可执行路径，脚本内容如下：
 
+    {% highlight bat linenos=table %}
     @ECHO OFF
 
     cd %~dp1
@@ -302,17 +303,20 @@ tags : [Sublime,文本编辑]
         ECHO -----------OUTPUT-----------
         java %~n1
     )
+    {% endhighlight %}
 
 注：“javac -encoding utf-8 %~nx1”的意义是指定源文件是“UTF-8”格式，如果你的源文件是其他格式，请修改或删除“-encoding utf-8”。
 
 #### 2. 将“Packages”目录下“Java.sublime-package”文件解压缩，修改“JavaC.sublime-build”文件后重新压缩，修改内容如下：
 
+    {% highlight text linenos=table %}
     {
         "shell_cmd": "runJava.bat \"$file\"",
         "file_regex": "^(...*?):([0-9]*):?([0-9]*)",
         "selector": "source.java",
         "encoding": "gbk"
     }
+    {% endhighlight %}
 
 注：第一行的“runJava.bat”即上面的脚本文件，最后一行"encoding": "gbk"的意义是将输出编码定义为本地中文代码页。如果你编译运行其他程序是发生“[Decode error - output not utf-8]”错误，都可以用此方法解决问题。
 

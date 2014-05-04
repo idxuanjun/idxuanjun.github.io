@@ -11,6 +11,7 @@ MSysGit 设置
 
 * 初始化配置：
 
+        {% highlight sh linenos=table %}
         #配置ID
         git config --global user.name "your_id"
         #配置EMAIL
@@ -24,6 +25,7 @@ MSysGit 设置
 
         # 全局配置文件权限
         git config --global core.filemode false
+        {% endhighlight %}
 
 * 配置 SSH 证书（下面二选一）：
 
@@ -44,14 +46,17 @@ MSysGit 设置
 
 * 修改或新建 `/etc/fstab`，增加以下内容：
 
+        {% highlight sh linenos=table %}
         d:/Platform/home /home
         d:/Platform/Resources /res
         d:/Space /spaces
         e:/Downloads /dl
         f:/Repositories/git /git_repo
+        {% endhighlight %}
 
 * 设置全局配置文件 `/etc/profile`：
 
+        {% highlight sh linenos=table %}
         # 定义语言环境变量
         export LC_ALL=en_US.UTF-8
         export LANG=en_US.UTF-8
@@ -69,32 +74,39 @@ MSysGit 设置
         alias ll='ls -l'                              # long list
         alias la='ls -A'                              # all but . and ..
         alias l='ls -CF'                              #
+        {% endhighlight %}
 
 * 右键菜单打开Cygwin在当前目录
 
 1. 增加注册表项：
 
+        {% highlight registry linenos=table %}
         Windows Registry Editor Version 5.00
 
         [HKEY_CLASSES_ROOT\Directory\shell\opengit]
         @="打开用 Git Bash"
         [HKEY_CLASSES_ROOT\Directory\shell\opengit\command]
         @="d:\\Platform\\MinGW\\git\\git-bash.bat %V"
+        {% endhighlight %}
 
 2. 修改Cygwin.bat文件，增加设置路径变量 `set _T=%*`：
 
+        {% highlight sh linenos=table %}
         @echo off
         set _T=%*
         ……
+        {% endhighlight %}
 
 3. 设置用户配置文件 `\home\${UserName}\.bash_profile`，在最后增加：
 
+        {% highlight sh linenos=table %}
         # 右键菜单打开Git在当前目录
         export _T=${_T//\\//}   # replace backslash to fowardslash
         if [[ $_T == "" ]]; then
             export _T=${HOME}
         fi
         cd "$_T"
+        {% endhighlight %}
 
 Git 常用操作
 ------------
@@ -107,8 +119,10 @@ Git 常用操作
 
     * 初始化服务仓库，不包括工作区，通常为远程仓库
 
+            {% highlight sh linenos=table %}
             git init  --bare
             git init  --bare --shared
+            {% endhighlight %}
 
 * 增加文件快照到当前工作区
 
@@ -152,9 +166,11 @@ Git 常用操作
 
 * 增加远程仓库配置
 
+        {% highlight sh linenos=table %}
         git remote add github git@github.com:idxuanjun/GitTest.git (推荐)
         git remote add github https://github.com/idxuanjun/GitTest.git
         git remote add local file://f:/Repositories/git/conv_dict
+        {% endhighlight %}
 
 * 删除远程仓库配置
 
@@ -174,14 +190,18 @@ Git 常用操作
 
 * 获取远程仓库
 
+        {% highlight sh linenos=table %}
         git pull 远端仓库名 远端分支名:本地分支名
         git pull github master
+        {% endhighlight %}
 
 * 提交到远程仓库
 
+        {% highlight sh linenos=table %}
         git push 远端仓库名 本地分支名:远端分支名
         git push github master
         git push -u github master
+        {% endhighlight %}
 
 * 创建一个没有父节点的分支（github规定，只有该分支中的页面，才会生成网页文件）
 
@@ -192,17 +212,21 @@ GitHub创建步骤
 
 * Create a new repository on the command line
 
-    touch README.md
-    git init
-    git add README.md
-    git commit -m "first commit"
-    git remote add origin https://github.com/idxuanjun/vimim_dict.git
-    git push -u origin master
+        {% highlight sh linenos=table %}
+        touch README.md
+        git init
+        git add README.md
+        git commit -m "first commit"
+        git remote add origin https://github.com/idxuanjun/vimim_dict.git
+        git push -u origin master
+        {% endhighlight %}
 
 * Push an existing repository from the command line
 
-    git remote add origin https://github.com/idxuanjun/vimim_dict.git
-    git push -u origin master
+        {% highlight sh linenos=table %}
+        git remote add origin https://github.com/idxuanjun/vimim_dict.git
+        git push -u origin master
+        {% endhighlight %}
 
 Git 忽略文件
 ------------
@@ -224,6 +248,7 @@ Git忽略文件有3种设置方式：
 
 * 忽略样例
 
+        {% highlight ini linenos=table %}
         #忽略掉所有文件名是 foo.txt的文件
         foo.txt
         #忽略所有生成的 html文件,
@@ -236,6 +261,7 @@ Git忽略文件有3种设置方式：
         foo/
         #忽略所有foo.txt以外文件.
         !foo.txt
+        {% endhighlight %}
 
 Git 使用点滴
 ------------
