@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7 ie" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8 ie" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9 ie" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7 ie" lang="zh_CN"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8 ie" lang="zh_CN"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9 ie" lang="zh_CN"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh_CN"> <!--<![endif]-->
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -21,29 +21,35 @@
                 <nav class="nav-global">
                     <ul>
                         <li class="logo"><a href="/">{{ site.title }}</a></li>
-                        <!--<li class="rss"><img src="http://{{ site.author.github }}.github.io/assets/pics/xuan-500.png" alt="老轩" title="Xuan" width="30"/></li>-->
-                        <!--<li class="archive"><a href="/archive.html">archive</a></li>-->
-                        <!--<li class="page"><a href="/pages.html">pages</a></li>-->
-                        <!--<li class="category"><a href="/categories.html">categories</a></li>-->
-                        <!--<li class="tag"><a href="/tags.html">tags</a></li>-->
-                        <!--<li class="forkme"><div><iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=plusjade&repo=jekyll-bootstrap&type=fork&count=true"-->
-                        <!--allowtransparency="true" frameborder="0" scrolling="0" width="95px" height="20px"></iframe></div></li>-->
+                        <li class="contact"><a href="mailto:{{ site.author.email }}"><img src="/assets/pics/email.png"
+                            alt="邮件" title="EMail" width="16" style="vertical-align:-23px"/>&nbsp;邮件联系</a></li>
+                        <li class="github"><a href="http://github.com/{{ site.author.github }}/"><img src="/assets/pics/git.png"
+                            alt="源码" title="Git" width="16" style="vertical-align:-23px"/>&nbsp;源码仓库</a></li>
+                        <li class="rss"><a href="/atom.xml"><img src="/assets/pics/feed.png"
+                            alt="订阅" title="Feed" width="16" style="vertical-align:-23px"/>&nbsp;订阅本站</a></li>
+                        <li>&nbsp;</li>
+                        <li>&nbsp;</li>
                     </ul>
-                </nav>
+                </nav>				
+                --------------------------<br/>
+                &nbsp;晒高楼的阳光&nbsp;吻唇角的残鬓<br/>
+                &nbsp;弹易断的琴弦&nbsp;饮不醒的美酒<br/>
+                --------------------------<br/>
+                <p class="licence">
+                Copyright &copy; {{ site.time | date: '2013-%Y' }} <a href="mailto:{{ site.author.email }}">Xuan Jun</a>.<br/>All rights reserved.<br/>
+                <a href="http://themes.jekyllbootstrap.com/">Theme</a> based on <a href="http://jekyllbootstrap.com/">Jekyll-Bootstrap</a>.
+                Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a>.
+                </p>
             </div><!-- unit-inner -->
         </div><!-- unit-head -->
     </header>
     <div class="body" role="main">
-        <div class="bodyb">
-            <div class="unit-body">
-                <div class="unit-bodyb">
-                    <div class="unit-inner unit-body-inner">
-                        <div class="entry-content">
-                            {{ content }}
-                        </div>
-                    </div><!-- unit-inner -->
-                </div>
-            </div>
+        <div class="unit-body">
+			<div class="unit-inner unit-body-inner">
+				<div class="entry-content">
+					{{ content }}
+				</div>
+			</div><!-- unit-inner -->
         </div><!-- unit-body -->
     </div><!-- body -->
     <footer class="the-footer">
@@ -51,11 +57,11 @@
             <div class="unit-inner unit-foot-inner">
                 <div class="misc vcard">
                     <h4>文档类别</h4>
+                    <ul class="tab_box">
+                        {% assign categories_list = site.categories %}
+                        {% include JB/categories_list %}
+                    </ul>
                 </div>
-                <ul class="tab_box">
-                    {% assign categories_list = site.categories %}
-                    {% include JB/categories_list %}
-                </ul>
                 <div class="misc vcard">
                     <h4>近期博文</h4>
                     <ul>
@@ -64,18 +70,6 @@
                         {% endfor %}
                     </ul>
                 </div>
-                <div class="misc vcard">
-                    <h4>关于</h4>
-                    <ul>
-                        <li class="contact"><a href="mailto:{{ site.author.email }}"><img src="/assets/pics/email.png"
-                            alt="邮件" title="EMail" width="16" style="vertical-align:-23px"/>&nbsp邮件联系</a></li>
-                        <li class="github"><a href="http://github.com/{{ site.author.github }}/"><img src="/assets/pics/git.png"
-                            alt="源码" title="Git" width="16" style="vertical-align:-23px"/>&nbsp源码仓库</a></li>
-                        <li class="rss"><a href="/atom.xml"><img src="/assets/pics/feed.png"
-                            alt="订阅" title="Feed" width="16" style="vertical-align:-23px"/>&nbsp订阅本站</a></li>
-                    </ul>
-                    <div class="clear"></div>
-                </div><!-- misc -->
                 <div class="misc vcard">
                     <h4>访问统计</h4>
                     <a href="http://www.hitwebcounter.com/links.php" target="_blank">
@@ -86,36 +80,7 @@
                         target="_blank" style="font-family: Geneva, Arial, Helvetica;
                         font-size: 12px; color: #6B706A; text-decoration: underline ;"><strong>Web Meter</strong>
                     </a>
-                    <!--<table border="0">
-                        <tr>
-                            <td align=center valign=bottom>
-                                <a href="http://www.hitwebcounter.com/" title="Web Meter"
-                                    target="_blank" style="font-family: Arial, Helvetica, sans-serif;
-                                    font-size: 12px; color: #6B706A; text-decoration: underline ;"><strong>Web Meter</strong>
-                                </a>
-                            </td>
-                            <td align=center valign=top>&nbsp</td>
-                        </tr>
-                        <tr>
-                            <td valign=left align=top><h4>访问统计</h4></td>
-                            <td align=center>
-                                <a href="http://www.hitwebcounter.com/links.php" target="_blank">
-                                    <img src="http://hitwebcounter.com/counter/counter.php?page=5505123&style=0025&nbdigits=6&type=page&initCount=0"
-                                    title="http://www.hitwebcounter.com/links.php" Alt="http://www.hitwebcounter.com/links.php"   border="0" >
-                                </a>
-                            </td>
-                        </tr>
-                    </table>-->
                 </div>
-                <p class="licence">
-                Copyright &copy; {{ site.time | date: '2013-%Y' }} {{ site.author.name }}<br>
-                ------------------------------<br>
-                &nbsp&nbsp~晒高楼的阳光&nbsp吻唇角的残鬓~<br>
-                &nbsp&nbsp~弹易断的琴弦&nbsp饮不醒的美酒~<br>
-                ------------------------------<br>
-                -<a href="http://themes.jekyllbootstrap.com/">Theme</a> based on <a href="http://jekyllbootstrap.com/">Jekyll-bootstrap</a>.<br>
-                -Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a>.
-                </p>
             </div><!-- unit-foot-inner -->
         </div><!-- unit-foot -->
     </footer>

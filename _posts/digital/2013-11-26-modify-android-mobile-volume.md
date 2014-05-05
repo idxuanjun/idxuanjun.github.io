@@ -1,6 +1,6 @@
 ---
 layout: post
-category: 电脑数码
+category: 电子数码
 title: 安卓手机修改音量键为 HOME 和 BACK 键
 tagline: "把工作变成兴趣"
 tags : [Android]
