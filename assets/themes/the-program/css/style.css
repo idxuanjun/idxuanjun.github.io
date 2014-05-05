@@ -604,7 +604,7 @@ pre {
     font-family: Consolas, Monaco, monospace;
     margin-left: 0;
     margin-right: 0;
-    padding: 1em 0em;
+    padding: 1em;
     overflow: auto;
     -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.6);
     -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.6);
@@ -644,8 +644,8 @@ pre {
 .unit-article .entry-content ul,
 .unit-article .entry-content ol,
 .unit-article .entry-content dd {
-    margin: 0px;
-    padding: 26px;
+    margin: 0;
+    padding-left: 28px;
 }
 .unit-article .entry-content h2,
 .unit-article .entry-content h3,
@@ -930,12 +930,12 @@ pre {
 .the-header .unit-head {
     padding: 26px;
 }
-.the-header .unit-head .licence {
+.the-footer .unit-foot .licence {
     clear: both;
-    font-size: 0.75em;
 }
-.the-header .unit-head .licence p {
+.the-footer .unit-foot .licence p {
     margin-bottom: 0;
+    font-size: 0.75em;
 }
 .the-header .unit-head .nav-global .logo {
     display: block;
@@ -1039,17 +1039,17 @@ Not that old computer layout
     .the-header .unit-head .nav-global .logo a {
         line-height: 18px;
         margin-bottom: 0;
-        padding-left: 42px;
+        padding-left: 52px;
     }
     .body {
         float: left;
         width: 100%;
-        margin-right: -480px;
+        margin-right: -370px;
     }
     .body .unit-body {
         border-top: 0 none;
-        margin-right: 480px;
-        padding: 26px 42px;
+        margin-right: 370px;
+        padding: 26px 52px;
     }
     .the-footer {
         background-color: transparent;
@@ -1059,12 +1059,11 @@ Not that old computer layout
         display: block;
         float: left;
         padding: 0 0 0 26px;
-        width: 400px;
+        width: 330px;
     }
-}
-/*
+}/*
 Huge-screen layout
- */
+  */
 @media only screen and (min-width: 1410px) {
     .the-header {
         float: left;

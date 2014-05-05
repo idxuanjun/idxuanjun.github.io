@@ -12,25 +12,25 @@
 			<div class="bd">
 				<div class="entry-content">
 					{{ content }}
-					<div class="meta">
-						<p class="date-publish">
-							发布日期：
-							<date class="date-pub" title="{{ page.date | date_to_xmlschema }}" datetime="{{ page.date | date_to_xmlschema }}" pubdate>
-							<span>{{ page.date | date: "%Y年%m月%d日" }}</span>
-							</date>
-						</p>
-						<ul class="list-category list-linear">
-							<li class="list-head">文档类别：</li>
-							{% assign categories_list = page.categories %}
-							{% include JB/categories_list %}
-						</ul>
-						<ul class="list-tag list-linear">
-							<li class="list-head">文档标签：</li>
-							{% assign tags_list = page.tags %}
-							{% include JB/tags_list %}
-						</ul>
-					</div><!-- meta -->
 				</div><!-- entry-content -->
+				<div class="meta">
+					<p class="date-publish">
+						发布日期：
+						<date class="date-pub" title="{{ page.date | date_to_xmlschema }}" datetime="{{ page.date | date_to_xmlschema }}" pubdate>
+							<span>{{ page.date | date: "%Y年%m月%d日" }}</span>
+						</date>
+					</p>
+					<ul class="list-category list-linear">
+						<li class="list-head">文档类别：</li>
+						{% assign categories_list = page.categories %}
+						{% include JB/categories_list %}
+					</ul>
+					<ul class="list-tag list-linear">
+						<li class="list-head">文档标签：</li>
+						{% assign tags_list = page.tags %}
+						{% include JB/tags_list %}
+					</ul>
+				</div><!-- meta -->
 				<div class="misc-content">
 					<div class="social">
 						<ul class="list-linear">
