@@ -579,13 +579,13 @@ html {
 }
 /* LINK */
 a:link {
-    /*color: #2d2d2d;*/
-    color: #484848;
+    color: #2d2d2d;
+    /*color: #484848;*/
     text-decoration: none;
 }
 a:visited {
-    /*color: #141414;*/
-    color: #808080;
+    color: #141414;
+    /*color: #808080;*/
     text-decoration: none;
 }
 a:hover {
@@ -659,8 +659,8 @@ pre {
 .unit-article .entry-content h4 a:link,
 .unit-article .entry-content h5 a:link,
 .unit-article .entry-content h6 a:link {
-    /*color: #2d2d2d;*/
-    color: #484848;
+    color: #2d2d2d;
+    /*color: #484848;*/
     border: 0;
 }
 .unit-article .entry-content h2 a:visited,
@@ -668,8 +668,8 @@ pre {
 .unit-article .entry-content h4 a:visited,
 .unit-article .entry-content h5 a:visited,
 .unit-article .entry-content h6 a:visited {
-    /*color: #141414;*/
-    color: #808080;
+    color: #141414;
+    /*color: #808080;*/
     border: 0;
 }
 .unit-article .entry-content h2 a:hover,
@@ -763,7 +763,6 @@ pre {
 }
 .unit-article img {
     display: block;
-    margin-left: auto;
     margin-left: auto;
 }
 .unit-article img.left {
@@ -909,15 +908,18 @@ pre {
 /* FOOTER
 ----------------------------------------------- */
 .the-footer a:link {
-    color: #484848;
+    color: #c26164;
+    /*color: #484848;*/
     border: 0;
 }
 .the-footer a:visited {
-    color: #808080;
+    color: #ad4346;
+    /*color: #808080;*/
     border: 0;
 }
 .the-footer a:hover {
-    color: #b0b0b0;
+    color: #d08688;
+    /*color: #b0b0b0;*/
     border: 0;
 }
 .the-footer ul {
@@ -959,15 +961,18 @@ pre {
     padding: 26px;
 }
 .the-footer a:link {
-    color: #484848;
+    color: #c26164;
+    /*color: #484848;*/
     border: 0;
 }
 .the-footer a:visited {
-    color: #808080;
+    color: #ad4346;
+    /*color: #808080;*/
     border: 0;
 }
 .the-footer a:hover {
-    color: #b0b0b0;
+    color: #d08688;
+    /*color: #b0b0b0;*/
     border: 0;
 }
 .the-footer h4 {
@@ -1003,9 +1008,9 @@ Tablet
         height: 26px;
     }
     .the-header .unit-head .nav-global li a:hover {
-        /*background-color: #fff04a;*/
-        background-color: #b6c3cd;
-        color: #474747;
+        background-color: #fff04a;
+        /*color: #474747;*/
+        color: #b0b0b0;
     }
     .the-header .unit-head .nav-global li:nth-child(2) {
         border-width: 0 1px;
@@ -1028,7 +1033,7 @@ Tablet
     }
 }
 /*
-Not that old computer layout
+Not that old computer layout 
  */
 @media only screen and (min-width: 1280px) {
     .the-header .unit-head .nav-global .logo {
@@ -1044,11 +1049,11 @@ Not that old computer layout
     .body {
         float: left;
         width: 100%;
-        margin-right: -370px;
+        margin-right: -340px;
     }
     .body .unit-body {
         border-top: 0 none;
-        margin-right: 370px;
+        margin-right: 340px;
         padding: 26px 52px;
     }
     .the-footer {
@@ -1059,11 +1064,12 @@ Not that old computer layout
         display: block;
         float: left;
         padding: 0 0 0 26px;
-        width: 330px;
+        width: 300px;
     }
-}/*
-Huge-screen layout
-  */
+}
+/*
+Huge-screen layout 
+ */
 @media only screen and (min-width: 1410px) {
     .the-header {
         float: left;
@@ -1106,15 +1112,15 @@ Huge-screen layout
         -o-box-shadow: #ffffff 0px 0px 2px;
         float: left;
         width: 83%;
-        margin-right: -370px;
+        margin-right: -340px;
     }
     .body .unit-body {
         border-right: 1px solid rgba(0, 0, 0, 0.2);
         -webkit-box-shadow: #ffffff 0px 0px 2px;
         -moz-box-shadow: #ffffff 0px 0px 2px;
         -o-box-shadow: #ffffff 0px 0px 2px;
-        margin-right: 370px;
-        padding: 26px 42px;
+        margin-right: 340px;
+        padding: 26px 52px;
         min-height: 1050px;
     }
     .the-footer {
@@ -1123,7 +1129,7 @@ Huge-screen layout
         display: block;
         float: left;
         padding: 26px 0 0 26px;
-        width: 330px;
+        width: 300px;
     }
     .the-footer h4 {
         font-size: 30px;
@@ -1520,3 +1526,33 @@ No styleguide reference.
                *display: inline;
                float: right;
            }
+
+           /*
+           ´óÍ·Ìù
+            */
+.headshots {
+    overflow: hidden;
+    position: relative;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    width: 90px;
+    height: 90px;
+}
+.headshots p {
+    position: static;
+    +position: absolute;
+    top: 50%;
+    margin: 0;
+    padding: 0;
+}
+.headshots img {
+    position: static;
+    +position: relative;
+    top: -50%; 
+    left: -50%;
+    margin: 0;
+    padding: 0;
+    width: 80px;
+    height: 80px;
+}
