@@ -1,6 +1,6 @@
 ---
 layout: page
-title : 首页
+title : 首页 - 老轩的博客
 tagline: 把工作变成兴趣
 ---
 {% include JB/setup %}
