@@ -36,13 +36,13 @@ tags : [Android]
 一般实体键的设置
 ----------------
 
-	HOME         主页
-	MENU         菜单
-	BACK         返回
-	SEARCH       搜索
-	POWER        电源
-	VOLUME_DOWN  音量减少
-	VOLUME_UP    音量增加
+    HOME         主页
+    MENU         菜单
+    BACK         返回
+    SEARCH       搜索
+    POWER        电源
+    VOLUME_DOWN  音量减少
+    VOLUME_UP    音量增加
 
 说明
 ----

@@ -25,7 +25,7 @@ tags : [Cygwin,操作系统]
 
 1. 设置全局配置文件 `Cygwin\etc\profile`：
 
-        {% highlight sh linenos=table %}
+        {% highlight sh %}
         #-----------------------------------------------------------
         # BuXing Settings
         #-----------------------------------------------------------

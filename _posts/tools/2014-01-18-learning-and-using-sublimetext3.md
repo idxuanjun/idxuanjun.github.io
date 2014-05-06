@@ -290,7 +290,7 @@ tags : [Sublime,文本编辑]
 
 #### 1. 增加编译运行批处理文件“runJava.bat”并放入可执行路径，脚本内容如下：
 
-    {% highlight bat linenos=table %}
+    {% highlight bat %}
     @ECHO OFF
 
     cd %~dp1
@@ -309,7 +309,7 @@ tags : [Sublime,文本编辑]
 
 #### 2. 将“Packages”目录下“Java.sublime-package”文件解压缩，修改“JavaC.sublime-build”文件后重新压缩，修改内容如下：
 
-    {% highlight text linenos=table %}
+    {% highlight text %}
     {
         "shell_cmd": "runJava.bat \"$file\"",
         "file_regex": "^(...*?):([0-9]*):?([0-9]*)",
