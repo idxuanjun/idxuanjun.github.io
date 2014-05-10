@@ -71,14 +71,14 @@ tags : [Cygwin,操作系统]
 
 2. 设置用户配置文件 `Cygwin\home\${UserName}\.bashrc`：
 
-            {% highlight sh linenos=table %}
+            {% highlight sh %}
             # 自动补全不区分大小写
             shopt -s nocaseglob
             {% endhighlight %}
 
 3. 设置用户配置文件 `Cygwin\home\${UserName}\.inputrc`：
 
-            {% highlight sh linenos=table %}
+            {% highlight sh %}
             # 自动补全不区分大小写
             set completion-ignore-case on
 
@@ -93,7 +93,7 @@ tags : [Cygwin,操作系统]
 
 4. 链接磁盘及常用文件夹：
 
-        {% highlight sh linenos=table %}
+        {% highlight sh %}
         ln -s /cygdrive/c /c
         ln -s /cygdrive/d /d
         ln -s /cygdrive/e /e
@@ -113,7 +113,7 @@ tags : [Cygwin,操作系统]
 
 1. 增加注册表项：
 
-        {% highlight registry linenos=table %}
+        {% highlight registry %}
         Windows Registry Editor Version 5.00
 
         [HKEY_CLASSES_ROOT\Directory\shell\opencygwin]
@@ -124,7 +124,7 @@ tags : [Cygwin,操作系统]
 
 2. 修改Cygwin.bat文件，增加设置路径变量 `set _T=%*`：
 
-        {% highlight bat linenos=table %}
+        {% highlight bat %}
         @echo off
         set _T=%*
         D:
@@ -134,7 +134,7 @@ tags : [Cygwin,操作系统]
 
 3. 设置用户配置文件 `Cygwin\home\${UserName}\.bash_profile`，在最后增加：
 
-        {% highlight sh linenos=table %}
+        {% highlight sh %}
         # 右键菜单打开Cygwin在当前目录
         export _T=${_T//\\//}   # replace backslash to fowardslash
         if [[ $_T == "" ]]; then
@@ -148,7 +148,7 @@ Git设置
 
 * 初始化配置：
 
-        {% highlight sh linenos=table %}
+        {% highlight sh %}
         #配置ID
         git config --global user.name "your_id"
         #配置EMAIL

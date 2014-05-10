@@ -146,7 +146,6 @@ pre,
 code,
 kbd,
 samp {
-    text-align: left;
     border-radius: 4px;
     opacity: 0.8;
     filter: "alpha(opacity=80)";
@@ -1546,9 +1545,33 @@ No styleguide reference.
                float: right;
            }
 
-           /*
-           大头贴
-            */
+/*--------------------------------------------------------------------- 
+ * Modified by Xuan Jun 2014-05-07
+---------------------------------------------------------------------*/
+/* 使用 Pygments linenos=inline 时 pre code 段不自动折行 */
+/*
+pre .lineno { color: #ccc; display:inline-block; padding: 0 5px; border-right:1px solid #ccc; }
+pre code { display: block; white-space: pre; overflow-x: auto; word-wrap: normal; }
+*/
+/* 
+使用 Pygments 时 pre code 段自动产生行号
+取消使用，IE 支持不正常
+*/
+/*
+pre code {
+    counter-reset: line-numbering;
+}
+
+pre code .line::before {
+    content: counter(line-numbering);
+    counter-increment: line-numbering;
+    padding-right: 1em; 
+    width: 1.5em;
+    text-align: right;
+    opacity: 0.8;
+}
+*/
+/* 大头贴 */
 .headshots {
     overflow: hidden;
     position: relative;

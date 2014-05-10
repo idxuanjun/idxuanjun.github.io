@@ -197,7 +197,7 @@ Markdown 支援两种形式的链接语法： 行内 和 参考 两种形式，�
 
 #### Markdown 语法:
 
-    ```plain
+    ```text
     code 1
     code 2
     code 3
@@ -205,7 +205,7 @@ Markdown 支援两种形式的链接语法： 行内 和 参考 两种形式，�
 
 #### Markdown 样例:
 
-```plain
+```text
 code 1
 code 2
 code 3
